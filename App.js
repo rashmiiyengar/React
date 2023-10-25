@@ -28,3 +28,6 @@ console.log(heading);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 console.log(parent);
 root.render(parent); //render converts heading object and converts it to h1 tag
+
+
+//tes comment
