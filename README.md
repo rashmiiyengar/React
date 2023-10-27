@@ -14,3 +14,8 @@ React js
 -Differential Bundling
 -Diagnostic
 -Tree shaking- Remove unused code
+
+
+#React Hooks
+-useState() = gives us Superpowerful react variables 
+-useEffect()
