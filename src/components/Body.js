@@ -7,7 +7,9 @@ const Body = () => {
   //State Variable = Powerful variable
   //React Hooks- useState
 
-  const [listOfRestraunt, setListOfRestraunt] = useState([]);
+  const [listOfRestaurants, setListOfRestraunt] = useState([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     console.log("rash");
@@ -20,8 +22,13 @@ const Body = () => {
     );
 
     const jsonResponseData = await data.json();
-    console.log(jsonResponseData);
+
     setListOfRestraunt(
+      //Optional Chaining
+      jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
+    setFilteredRestaurant(
       //Optional Chaining
       jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
@@ -30,18 +37,44 @@ const Body = () => {
 
   //Conditional Rendering
 
-  return listOfRestraunt.length === 0 ? (
+  return listOfRestaurants.length == 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
       <div className="filter">
-        <button 
+        <div className="search input-group">
+          <input
+            type="text"
+            className="searchbox form-control"
+            placeholder="Search Restraunts"
+            value={searchText}
+            onChange={(text) => {
+              setSearchText(text.target.value);
+            }}
+          ></input>
+          <button
+            className="btn btn-outline-success"
+            onClick={() => {
+              //Filter the restraunts and update the UI
+              //Search Test
+              console.log(searchText);
+              const filteredRestaurant = listOfRestaurants.filter((item) =>
+                item.info.name.includes(searchText)
+              );
+              console.log(filteredRestaurant);
+              setFilteredRestaurant(filteredRestaurant);
+            }}
+          >
+            Search
+          </button>
+        </div>
+        <button
           className="filter-btn btn btn-outline-success"
           onClick={() => {
-            let filteredList = listOfRestraunt.filter(
-              (res) => res.info.avgRating > 4.2
+            let filteredList = listOfRestaurants.filter(
+              (res) => res.info.avgRating > 4.4
             );
-            setListOfRestraunt(filteredList);
+            setFilteredRestaurant(filteredList);
             console.log(filteredList);
           }}
         >
@@ -49,7 +82,7 @@ const Body = () => {
         </button>
       </div>
       <div className="restraunt-container">
-        {listOfRestraunt.map((restaurant) => (
+        {filteredRestaurant.map((restaurant) => (
           <RestrauntCard key={restaurant.info.id} restaurant={restaurant} />
         ))}
       </div>

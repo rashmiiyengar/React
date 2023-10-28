@@ -18,7 +18,9 @@ const Header = () => {
           <button
             className="btn btn-outline-success"
             onClick={() => {
-              setbtnNameReact("Logout");
+              btnNameReact == "Login"
+                ? setbtnNameReact("Logout")
+                : setbtnNameReact("Login");
             }}
           >
             {btnNameReact}
