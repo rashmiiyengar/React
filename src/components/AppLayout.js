@@ -10,5 +10,5 @@ const AppLayout = () => {
     );
   };
    
-console.log(<Body/>);
+
   export default AppLayout;
