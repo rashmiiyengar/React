@@ -87,3 +87,25 @@
 .app-theme{
   color: green;
 }
+
+.transparent-background {
+  background-color: rgba(122, 161, 124, 0.05); /* Use rgba to set a transparent background color */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.transparent-background h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.transparent-background p {
+  font-size: 16px;
+  color: #555;
+}
+
+.user-card{
+  padding: 10px;
+  border:1px solid black;
+  margin:10px
+}
