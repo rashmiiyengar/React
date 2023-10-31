@@ -2,6 +2,7 @@ import RestrauntCard from "./RestrauntCard";
 import Shimmer from "./Shimmer";
 //import { data as swiggyRestaurantList } from "../../mocks/mockData";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   //State Variable = Powerful variable
@@ -22,7 +23,7 @@ const Body = () => {
     );
 
     const jsonResponseData = await data.json();
-
+    console.log(jsonResponseData);
     setListOfRestraunt(
       //Optional Chaining
       jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
@@ -83,7 +84,12 @@ const Body = () => {
       </div>
       <div className="restraunt-container">
         {filteredRestaurant.map((restaurant) => (
-          <RestrauntCard key={restaurant.info.id} restaurant={restaurant} />
+          <Link className="app-theme"
+          key={restaurant.info.id}
+            to={"restaurants/" + restaurant.info.id}
+          >
+            <RestrauntCard restaurant={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
