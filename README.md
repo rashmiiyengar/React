@@ -17,5 +17,8 @@ React js
 
 
 #React Hooks
--useState() = gives us Superpowerful react variables 
--useEffect()
+-useState() = gives us Superpowerful State variables 
+-useEffect() 
+
+1. What is NPM?
+npm is used to download different javascript modules/packages present in the npm repository. It is a command used to run from client box to download different packages or modules in there project. So people call it node package manager but in npm documentation the full form of npm is never mentioned. npm allows to update, install and manage javascript packages
