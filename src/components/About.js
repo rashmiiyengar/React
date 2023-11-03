@@ -18,6 +18,7 @@ class About extends React.Component{
     console.log("parent render")
     return(
       <div >
+        <User name={"Rashmi"} location={"San Jose"}/>
       <UserClass name={"First"} location={"San Jose"}/>
     
     </div>
