@@ -23,6 +23,7 @@
 .nav-items > ul > li {
   padding: 10px;
   margin: 10px;
+  margin-top: 30px;
 }
 .restraunt-card {
   width: 200px;
@@ -108,4 +109,12 @@
   padding: 10px;
   border:1px solid black;
   margin:10px
+}
+
+.button-size{
+  height: 50px;
+  width: 70px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 30px;
 }

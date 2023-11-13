@@ -36,9 +36,14 @@ const Header = () => {
               ContactUs
             </Link>
           </li>
+          <li>
+            <Link className="text-success" to="/grocery">
+              Grocery
+            </Link>
+          </li>
           <li className="text-success">Cart</li>
           <button
-            className="btn btn-outline-success"
+            className="btn btn-outline-success button-size "
             onClick={() => {
               btnNameReact == "Login"
                 ? setbtnNameReact("Logout")

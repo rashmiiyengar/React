@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import AppLayout from "./components/AppLayout";
 import About from "./components/About";
@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Body from "./components/Body";
 import Error from "./components/Error";
 import RestrauntMenu from "./components/RestrauntMenu";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 //React Element
@@ -14,6 +15,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //JSX=> Babel transpiles it to  React.createElement=> ReactElement(JS Object) => HTMLElement(Render)
 
 //Component Composition
+
+//Chunking
+//Code Splitting
+//Dynamic bundling
+//Lazy Loading
+//On Demand Loading
+//Dynamic Import
+
+const Grocery = lazy(() => import("./components/Grocery"));
 
 const appRouter = createBrowserRouter([
   {
@@ -23,7 +33,7 @@ const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Body />,
-      }, 
+      },
       {
         path: "/about",
         element: <About />,
@@ -33,8 +43,17 @@ const appRouter = createBrowserRouter([
         element: <Contact />,
       },
       {
+        path: "/grocery",
+        element: (
+          <Suspense fallback={<h1>Loading..</h1>}>
+          
+            <Grocery />
+          </Suspense>
+        ),
+      },
+      {
         path: "/restaurants/:resId",
-        element: <RestrauntMenu/>
+        element: <RestrauntMenu />,
       },
     ],
     errorElement: <Error />,
@@ -43,4 +62,3 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);
-
