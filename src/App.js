@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import AppLayout from "./components/AppLayout";
-import About from "./components/About";
 import Contact from "./components/Contact";
 import Body from "./components/Body";
 import Error from "./components/Error";
@@ -24,6 +23,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Dynamic Import
 
 const Grocery = lazy(() => import("./components/Grocery"));
+const About = lazy(() => import("./components/About"));
 
 const appRouter = createBrowserRouter([
   {
@@ -36,7 +36,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<h1>Loading..</h1>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
@@ -46,7 +50,6 @@ const appRouter = createBrowserRouter([
         path: "/grocery",
         element: (
           <Suspense fallback={<h1>Loading..</h1>}>
-          
             <Grocery />
           </Suspense>
         ),
