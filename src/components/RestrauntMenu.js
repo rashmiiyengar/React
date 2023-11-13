@@ -1,27 +1,29 @@
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_API } from "../utils/constants";
+import useRestrauntMenu from "../utils/useRestrauntMenu";
 
 const RestrauntMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
+  //const [resInfo, setResInfo] = useState(null);
 
   const { resId } = useParams();
-  console.log(resId);
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  
+const resInfo = useRestrauntMenu(resId);
 
-  const fetchMenu = async () => {
-    const menuData = await fetch(
-      MENU_API + resId + "&catalog_qa=undefined&submitAction=ENTER"
-    );
+  // console.log(resId);
+  // useEffect(() => {
+  //   fetchMenu();
+  // }, []);
 
-    const jsonMenuResponse = await menuData.json();
-    setResInfo(jsonMenuResponse?.data);
-  };
+  // const fetchMenu = async () => {
+  //   const menuData = await fetch(
+  //     MENU_API + resId + "&catalog_qa=undefined&submitAction=ENTER"
+  //   );
 
-  console.log(resInfo);
+  //   const jsonMenuResponse = await menuData.json();
+  //   setResInfo(jsonMenuResponse?.data);
+  // };
+
   if (resInfo == null) return <Shimmer />;
 
   const { name, cuisines, costForTwoMessage } = resInfo.cards[0].card.card.info;
