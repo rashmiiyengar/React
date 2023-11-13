@@ -3,6 +3,8 @@ import Shimmer from "./Shimmer";
 //import { data as swiggyRestaurantList } from "../../mocks/mockData";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import Offline from "./Offline";
 
 const Body = () => {
   //State Variable = Powerful variable
@@ -36,6 +38,9 @@ const Body = () => {
     );
   };
 
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus ===false) return 
+  <h1>You are Offline</h1>
   //Conditional Rendering
 console.log(listOfRestaurants)
   return listOfRestaurants.length == 0 ? (
