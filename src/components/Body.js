@@ -28,12 +28,12 @@ const Body = () => {
     console.log(jsonResponseData);
     setListOfRestraunt(
       //Optional Chaining
-      jsonResponseData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+      jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setFilteredRestaurant(
       //Optional Chaining
-      jsonResponseData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+      jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
@@ -48,7 +48,7 @@ console.log(listOfRestaurants)
   ) : (
     <div className="body">
       <div className="filter">
-        <div className="search input-group">
+        <div className="search input-group m-2 p-2">
           <input
             type="text"
             className="searchbox form-control"
@@ -75,7 +75,7 @@ console.log(listOfRestaurants)
           </button>
         </div>
         <button
-          className="filter-btn btn btn-outline-success"
+          className="filter-btn btn btn-outline-success ml-4 mb-2 p-2"
           onClick={() => {
             let filteredList = listOfRestaurants.filter(
               (res) => res.info.avgRating > 4.2
@@ -87,7 +87,7 @@ console.log(listOfRestaurants)
           Top Rated Restraunt
         </button>
       </div>
-      <div className="restraunt-container">
+      <div className="flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
           <Link className="app-theme"
           key={restaurant.info.id}

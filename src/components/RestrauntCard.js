@@ -12,13 +12,13 @@ const RestrauntCard = (props) => {
   } = restaurant?.info;
 
   return (
-    <div className="restraunt-card" style={{ backgroundColor: "#f0f0f0 " }}>
+    <div className="m-4 p-4 w-[250px] rounded-lg" style={{ backgroundColor: "#f0f0f0 " }}>
       <img
-        className="restraunt-item"
+        className="rounded-lg"
         alt="res-logo"
         src={CDN_URL+restaurantImage}
       ></img>
-      <h5>{restaurantName}</h5>
+      <h5 className="font-bold py-4">{restaurantName}</h5>
       <h6>{cuisine.join(", ")}</h6>
       <p>{starRating}</p>
       <p>{costForTwo}</p>
@@ -27,6 +27,5 @@ const RestrauntCard = (props) => {
     </div>
   );
 };
-
 
 export default RestrauntCard;

@@ -14,36 +14,36 @@ const Header = () => {
   }, [btnNameReact]);
 
   return (
-    <div className="header">
+    <div className="flex justify-between shadow-sm px">
       <div className="logo-container ">
-        <img className="logo" src={Logo} alt="Logo" />
+        <img className="w-56" src={Logo} alt="Logo" />
       </div>
-      <div className="nav-items ">
-        <ul>
-          <li>Status :{onlineStatus? " Online 🟢" :" Offline 🔴" }</li>
-          <li>
+      <div className="flex items-center ">
+        <ul className="flex p-4 m-4"> 
+          <li className="px-4">Status :{onlineStatus? " Online 🟢" :" Offline 🔴" }</li>
+          <li className="px-4">
             <Link className="text-success" to="/">
               Home
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link className="text-success" to="/about">
               AboutUs
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link className="text-success" to="/contact">
               ContactUs
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link className="text-success" to="/grocery">
               Grocery
             </Link>
           </li>
-          <li className="text-success">Cart</li>
+          <li className="text-success px-4">Cart</li>
           <button
-            className="btn btn-outline-success button-size "
+            className="btn btn-outline-success px-4"
             onClick={() => {
               btnNameReact == "Login"
                 ? setbtnNameReact("Logout")
