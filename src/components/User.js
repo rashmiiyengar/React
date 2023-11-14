@@ -15,7 +15,7 @@ const User = ({ name, location }) => {
   }, [count]);
 
   return (
-    <div className="transparent-background user-card">
+    <div className="user-card m-4 p-4 bg-gray-200 rounded-lg"> 
       <h5>Count: {count}</h5>
       <h5>Name: {name} </h5>
       <p>Location : {location}</p>

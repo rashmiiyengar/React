@@ -38,9 +38,9 @@ const Body = () => {
     );
   };
 
-  const onlineStatus = useOnlineStatus();
-  if (onlineStatus ===false) return 
-  <h1>You are Offline</h1>
+  // const onlineStatus = useOnlineStatus();
+  // if (onlineStatus ===false) return 
+  // <h1>You are Offline</h1>
   //Conditional Rendering
 console.log(listOfRestaurants)
   return listOfRestaurants.length == 0 ? (
@@ -93,6 +93,7 @@ console.log(listOfRestaurants)
           key={restaurant.info.id}
             to={"restaurants/" + restaurant.info.id}
           >
+            {/* if Restraunt is open add a open label to it*/}
             <RestrauntCard restaurant={restaurant} />
           </Link>
         ))}

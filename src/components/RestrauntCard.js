@@ -12,9 +12,9 @@ const RestrauntCard = (props) => {
   } = restaurant?.info;
 
   return (
-    <div className="m-4 p-4 w-[250px] rounded-lg" style={{ backgroundColor: "#f0f0f0 " }}>
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-slate-100 hover:bg-slate-200" >
       <img
-        className="rounded-lg"
+        className="rounded-lg h-38 w-42"
         alt="res-logo"
         src={CDN_URL+restaurantImage}
       ></img>
@@ -27,5 +27,8 @@ const RestrauntCard = (props) => {
     </div>
   );
 };
+ 
+//Higher Order Component4
+// It takes input as RestrauntCard and output will be RestrauntCardOpen
 
 export default RestrauntCard;

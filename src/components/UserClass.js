@@ -45,7 +45,7 @@ class UserClass extends React.Component {
     const {name,location,public_repos,avatar_url} = this.state.userInfo;
     console.log("Child render");
     return (
-      <div className="transparent-background user-card">
+      <div className="user-card m-4 p-4 bg-gray-200 rounded-lg border-black">
         <h5>Name: {name} </h5>
         <p>Loation :{location}</p>
         <p>Public Repository :{public_repos}</p>
