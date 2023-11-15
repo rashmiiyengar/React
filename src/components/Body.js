@@ -3,6 +3,7 @@ import Shimmer from "./Shimmer";
 //import { data as swiggyRestaurantList } from "../../mocks/mockData";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { withOpenLabel } from "./RestrauntCard";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Offline from "./Offline";
 
@@ -13,6 +14,8 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestraunt] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  const RestrauntCardOpen = withOpenLabel(RestrauntCard);
 
   useEffect(() => {
     console.log("rash");
@@ -43,6 +46,7 @@ const Body = () => {
   // <h1>You are Offline</h1>
   //Conditional Rendering
 console.log(listOfRestaurants)
+console.log(filteredRestaurant)
   return listOfRestaurants.length == 0 ? (
     <Shimmer />
   ) : (
@@ -90,11 +94,14 @@ console.log(listOfRestaurants)
       <div className="flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
           <Link className="app-theme"
-          key={restaurant.info.id}
-            to={"restaurants/" + restaurant.info.id}
+          key={restaurant?.info?.id}
+            to={"restaurants/" + restaurant?.info?.id}
           >
-            {/* if Restraunt is open add a open label to it*/}
-            <RestrauntCard restaurant={restaurant} />
+            {/* if Restraunt is open add a open label to it*/
+            
+            restaurant.info.isOpen? (<RestrauntCardOpen restaurant={restaurant}/>):
+            (<RestrauntCard restaurant={restaurant} />)}
+            
           </Link>
         ))}
       </div>
