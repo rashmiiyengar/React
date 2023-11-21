@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
-import React, { lazy, Suspense } from "react";
+import React from "react";
+import { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import AppLayout from "./components/AppLayout";
 import Contact from "./components/Contact";

@@ -20,6 +20,7 @@
     "tailwindcss": "^3.3.5"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "bootstrap": "^5.3.2",
     "emoji": "^0.3.2",
     "formik": "^2.4.5",
