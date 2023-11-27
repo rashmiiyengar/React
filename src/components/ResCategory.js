@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 const ResCategory = ({ cardData, showItems, setsIndex }) => {
   const handleClick = () => {
     setsIndex();
+    
   };
   return (
     <div>

@@ -1,11 +1,12 @@
 import RestrauntCard from "./RestrauntCard";
 import Shimmer from "./Shimmer";
 //import { data as swiggyRestaurantList } from "../../mocks/mockData";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { withOpenLabel } from "./RestrauntCard";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Offline from "./Offline";
+import UserContext from "../utils/userContext";
 
 const Body = () => {
   //State Variable = Powerful variable
@@ -42,11 +43,14 @@ const Body = () => {
   };
 
   // const onlineStatus = useOnlineStatus();
-  // if (onlineStatus ===false) return 
+  // if (onlineStatus ===false) return
   // <h1>You are Offline</h1>
   //Conditional Rendering
-console.log(listOfRestaurants)
-console.log(filteredRestaurant)
+  // console.log(listOfRestaurants)
+  // console.log(filteredRestaurant)
+
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   return listOfRestaurants.length == 0 ? (
     <Shimmer />
   ) : (
@@ -78,30 +82,48 @@ console.log(filteredRestaurant)
             Search
           </button>
         </div>
-        <button
-          className="filter-btn btn btn-outline-success ml-4 mb-2 p-2"
-          onClick={() => {
-            let filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4.2
-            );
-            setFilteredRestaurant(filteredList);
-            console.log(filteredList);
-          }}
-        >
-          Top Rated Restraunt
-        </button>
+        <div className="flex">
+          <button
+            className="filter-btn btn btn-outline-success ml-4 mb-2 p-2"
+            onClick={() => {
+              let filteredList = listOfRestaurants.filter(
+                (res) => res.info.avgRating > 4.2
+              );
+              setFilteredRestaurant(filteredList);
+              console.log(filteredList);
+            }}
+          >
+            Top Rated Restraunt
+          </button>
+          <div className="flex">
+            <label className="text-success font-semibold font-green-700 ml-4 mb-2 p-2">
+              UserName:
+            </label>
+            <input
+              className="border border-green-700 searchbox form-control ml-4 mb-2 p-2"
+              value ={loggedInUser}
+              onChange={(text) => setUserName(text.target.value)
+              }
+            />
+          </div>
+        </div>
       </div>
       <div className="flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
-          <Link className="app-theme"
-          key={restaurant?.info?.id}
+          <Link
+            className="app-theme"
+            key={restaurant?.info?.id}
             to={"restaurants/" + restaurant?.info?.id}
           >
-            {/* if Restraunt is open add a open label to it*/
-            
-            restaurant.info.isOpen? (<RestrauntCardOpen restaurant={restaurant}/>):
-            (<RestrauntCard restaurant={restaurant} />)}
-            
+            {
+              /* if Restraunt is open add a open label to it*/
+
+              restaurant.info.isOpen ? (
+                <RestrauntCardOpen restaurant={restaurant} />
+              ) : (
+                <RestrauntCard restaurant={restaurant} />
+              )
+            }
           </Link>
         ))}
       </div>

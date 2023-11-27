@@ -10,6 +10,7 @@ const RestrauntMenu = () => {
   const resInfo = useRestrauntMenu(resId);
   const [sIndex, setsIndex] = useState(null);
 
+  const dummy= "dummy"
   // console.log(resId);
   // useEffect(() => {
   //   fetchMenu();
@@ -37,7 +38,7 @@ const RestrauntMenu = () => {
         category.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-console.log(categories);
+
   return (
     <div className="text-center">
       <h3 className="font-bold mt-2 text-2xl">{name}</h3>
@@ -53,6 +54,7 @@ console.log(categories);
             cardData={category?.card?.card}
             showItems={index == sIndex ? true : false}
             setsIndex={() => setsIndex(index)}
+            dummy={dummy}
           />
         ))
       }
