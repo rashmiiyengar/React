@@ -44,7 +44,7 @@ const Header = () => {
               Grocery
             </Link>
           </li>
-          <li className="text-success px-4">Cart</li>
+          <li className="text-success px-4">Cart 🛒</li>
           
           <button
             className="btn btn-outline-success px-4"

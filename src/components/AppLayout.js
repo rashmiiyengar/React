@@ -1,7 +1,10 @@
 import UserContext from "../utils/userContext";
 import Header from "./Header";
 import { Outlet } from "react-router-dom";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Provider } from "react-redux";
+import appStore from "../utils/appStore";
+
 const AppLayout = () => {
   const [userName, setUserName] = useState();
 
@@ -13,15 +16,17 @@ const AppLayout = () => {
       name: "Rashmi Iyengar",
     };
     setUserName(data.name);
-  },[]);
+  }, []);
 
   return (
-    <UserContext.Provider value = {{loggedInUser: userName,setUserName}}>
-      <div className="app">
-        <Header />
-        <Outlet />
-      </div>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
