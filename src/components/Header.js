@@ -3,6 +3,7 @@ import { useEffect, useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/userContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnNameReact, setbtnNameReact] = useState("Login");
@@ -14,7 +15,12 @@ const Header = () => {
     console.log("use effect Called");
   }, [btnNameReact]);
 
-  const {loggedInUser} = useContext(UserContext);
+  const { loggedInUser } = useContext(UserContext);
+
+  // Subscribing to the store using selector-  Hook
+  const cartItems = useSelector((store)=>store.cart.items)
+
+  console.log(cartItems);
 
   return (
     <div className="flex justify-between shadow-sm px sm:bg-green lg:bg-pink">
@@ -44,7 +50,12 @@ const Header = () => {
               Grocery
             </Link>
           </li>
-          <li className="text-success px-4">Cart 🛒</li>
+          
+          <li className="text-success px-4 font-bold">
+          <Link className="text-success" to="/cart">
+          Cart ({cartItems.length} items) 🛒
+            </Link>
+            </li>
           
           <button
             className="btn btn-outline-success px-4"

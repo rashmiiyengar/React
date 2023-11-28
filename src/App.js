@@ -6,6 +6,7 @@ import AppLayout from "./components/AppLayout";
 import Contact from "./components/Contact";
 import Body from "./components/Body";
 import Error from "./components/Error";
+import Cart from "./components/Cart";
 import RestrauntMenu from "./components/RestrauntMenu";
 import UserContext from "./utils/userContext";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -55,9 +56,14 @@ const appRouter = createBrowserRouter([
           </Suspense>
         ),
       },
+
       {
         path: "/restaurants/:resId",
         element: <RestrauntMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,

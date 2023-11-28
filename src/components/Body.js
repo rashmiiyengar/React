@@ -32,12 +32,12 @@ const Body = () => {
     console.log(jsonResponseData);
     setListOfRestraunt(
       //Optional Chaining
-      jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      jsonResponseData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setFilteredRestaurant(
       //Optional Chaining
-      jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      jsonResponseData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
