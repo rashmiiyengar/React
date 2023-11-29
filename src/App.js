@@ -7,6 +7,8 @@ import Contact from "./components/Contact";
 import Body from "./components/Body";
 import Error from "./components/Error";
 import Cart from "./components/Cart";
+import OrderHistory from "./components/OrderHistory";
+import OrderConfirmationPage from "./components/OrderConfirmationPage";
 import RestrauntMenu from "./components/RestrauntMenu";
 import UserContext from "./utils/userContext";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -65,6 +67,14 @@ const appRouter = createBrowserRouter([
         path: "/cart",
         element: <Cart />,
       },
+      {
+        path: "/confirmation/:data",
+        element: <OrderConfirmationPage />,
+      },
+      {
+        path: "/orderhistory",
+        element: <OrderHistory />,
+      }
     ],
     errorElement: <Error />,
   },

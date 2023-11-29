@@ -28,7 +28,7 @@ const Body = () => {
     );
 
     const jsonResponseData = await data.json();
-    console.log(jsonResponseData);
+   
     setListOfRestraunt(
       //Optional Chaining
       jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
@@ -70,11 +70,11 @@ const Body = () => {
             onClick={() => {
               //Filter the restraunts and update the UI
               //Search Test
-              console.log(searchText);
+            
               const filteredRestaurant = listOfRestaurants.filter((item) =>
                 item.info.name.includes(searchText)
               );
-              console.log(filteredRestaurant);
+            
               setFilteredRestaurant(filteredRestaurant);
             }}
           >
@@ -89,7 +89,7 @@ const Body = () => {
                 (res) => res.info.avgRating > 4.2
               );
               setFilteredRestaurant(filteredList);
-              console.log(filteredList);
+             
             }}
           >
             Top Rated Restraunt

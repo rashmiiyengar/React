@@ -50,7 +50,7 @@ const Header = () => {
               Grocery
             </Link>
           </li>
-          
+        
           <li className="text-success px-4 font-bold">
           <Link className="text-success" to="/cart">
           Cart ({cartItems.length} items) 🛒
