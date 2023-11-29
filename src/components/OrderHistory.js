@@ -23,11 +23,11 @@ const OrderHistory = () => {
 console.log(groupedOrders);
   return (
     <div>
-      <h2>Order History Page</h2>
+      <h3 className="text-success justify-center items-center">Order History Page</h3>
       {Object.keys(groupedOrders).length > 0 ? (
         Object.keys(groupedOrders).map((orderId) => (
-          <div key={orderId} className="p-4 m-4 border-slate-950">
-            <h3>Order #{orderId === "Unknown" ? "Unknown" : orderId}</h3>
+          <div key={orderId} className="p-2 m-20 h-20 w-auto border-grey-50 border-b-4 text-center flex flex-col items-center justify-center shadow-lg">
+            <h3 className="text-success">Order #{orderId === "Unknown" ? "Unknown" : orderId}</h3>
             <ul>
               {groupedOrders[orderId].map((order, index) => (
                 <li key={index}>
