@@ -30,3 +30,17 @@ npm is used to download different javascript modules/packages present in the npm
 - slice (CartSlice)
 -dispatch(action)
 -Selector
+
+----------
+
+# Types of Testing Developer
+-Unit Testing
+-Integration Testing
+-End to End Testing 
+
+# Setting up Testing in our app
+-Install React Testing library
+-Install jest
+-Install Babel Dependencies
+-Configure Babel 
+-Configure Parcel config file to disable default babel transpilation
