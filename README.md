@@ -44,3 +44,8 @@ npm is used to download different javascript modules/packages present in the npm
 -Install Babel Dependencies
 -Configure Babel 
 -Configure Parcel config file to disable default babel transpilation
+- Writing Jest Configuration - npx jest -- init 
+-Install jsdom library
+- Install npm i @babel/preset-react for JSX to be enabled in our Testcases
+-Include @babel /preset-react in my config
+-Install @testing-library/jest-com
