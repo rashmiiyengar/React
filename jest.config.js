@@ -26,6 +26,11 @@ const config = {
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
 
+  moduleNameMapper: {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+      "<rootDir>/file-mock.js",
+    "\\.(css|less)$": "<rootDir>/style-mock.js",
+  },
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
   //   "\\\\node_modules\\\\"
