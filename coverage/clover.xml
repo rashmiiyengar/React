@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701385973837" clover="3.2.0">
-  <project timestamp="1701385973838" name="All files">
-    <metrics statements="53" coveredstatements="38" conditionals="4" coveredconditionals="2" methods="20" coveredmethods="9" elements="77" coveredelements="49" complexity="0" loc="53" ncloc="53" packages="4" files="12" classes="12"/>
+<coverage generated="1701409250603" clover="3.2.0">
+  <project timestamp="1701409250603" name="All files">
+    <metrics statements="131" coveredstatements="83" conditionals="22" coveredconditionals="7" methods="51" coveredmethods="21" elements="204" coveredelements="111" complexity="0" loc="131" ncloc="131" packages="4" files="21" classes="21"/>
     <package name="React">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="file-mock.js" path="C:\Users\Rashmi\Documents\React\file-mock.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
       </file>
     </package>
     <package name="React.mocks">
@@ -17,7 +17,54 @@
       </file>
     </package>
     <package name="React.src.components">
-      <metrics statements="30" coveredstatements="22" conditionals="4" coveredconditionals="2" methods="12" coveredmethods="7"/>
+      <metrics statements="99" coveredstatements="58" conditionals="22" coveredconditionals="7" methods="40" coveredmethods="16"/>
+      <file name="Body.js" path="C:\Users\Rashmi\Documents\React\src\components\Body.js">
+        <metrics statements="24" coveredstatements="15" conditionals="4" coveredconditionals="1" methods="10" coveredmethods="3"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="48" count="10" type="stmt"/>
+        <line num="51" count="10" type="stmt"/>
+        <line num="53" count="10" type="cond" truecount="1" falsecount="1"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="113" count="0" type="stmt"/>
+      </file>
+      <file name="Cart.js" path="C:\Users\Rashmi\Documents\React\src\components\Cart.js">
+        <metrics statements="11" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+      </file>
+      <file name="CartItem.js" path="C:\Users\Rashmi\Documents\React\src\components\CartItem.js">
+        <metrics statements="3" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
       <file name="Contact.js" path="C:\Users\Rashmi\Documents\React\src\components\Contact.js">
         <metrics statements="10" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
@@ -33,27 +80,73 @@
       </file>
       <file name="Header.js" path="C:\Users\Rashmi\Documents\React\src\components\Header.js">
         <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="4"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
-        <line num="21" count="9" type="stmt"/>
-        <line num="23" count="5" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
         <line num="63" count="1" type="cond" truecount="1" falsecount="1"/>
       </file>
-      <file name="RestrauntCard.js" path="C:\Users\Rashmi\Documents\React\src\components\RestrauntCard.js">
-        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="ItemList.js" path="C:\Users\Rashmi\Documents\React\src\components\ItemList.js">
+        <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+      </file>
+      <file name="Offline.js" path="C:\Users\Rashmi\Documents\React\src\components\Offline.js">
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="ResCategory.js" path="C:\Users\Rashmi\Documents\React\src\components\ResCategory.js">
+        <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="RestrauntCard.js" path="C:\Users\Rashmi\Documents\React\src\components\RestrauntCard.js">
+        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="3" count="2" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
+      </file>
+      <file name="RestrauntMenu.js" path="C:\Users\Rashmi\Documents\React\src\components\RestrauntMenu.js">
+        <metrics statements="14" coveredstatements="6" conditionals="4" coveredconditionals="1" methods="4" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="28" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+      </file>
+      <file name="Shimmer.js" path="C:\Users\Rashmi\Documents\React\src\components\Shimmer.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
       </file>
       <file name="sum.js" path="C:\Users\Rashmi\Documents\React\src\components\sum.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -62,45 +155,57 @@
       </file>
     </package>
     <package name="React.src.utils">
-      <metrics statements="21" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="2"/>
+      <metrics statements="30" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="5"/>
       <file name="UserContext.js" path="C:\Users\Rashmi\Documents\React\src\utils\UserContext.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
       </file>
       <file name="appStore.js" path="C:\Users\Rashmi\Documents\React\src\utils\appStore.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
       </file>
       <file name="cartSlice.js" path="C:\Users\Rashmi\Documents\React\src\utils\cartSlice.js">
         <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
       </file>
       <file name="constants.js" path="C:\Users\Rashmi\Documents\React\src\utils\constants.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
       </file>
       <file name="orderSlice.js" path="C:\Users\Rashmi\Documents\React\src\utils\orderSlice.js">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
       </file>
       <file name="useOnlineStatus.js" path="C:\Users\Rashmi\Documents\React\src\utils\useOnlineStatus.js">
         <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="10" count="4" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+      </file>
+      <file name="useRestrauntMenu.js" path="C:\Users\Rashmi\Documents\React\src\utils\useRestrauntMenu.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
       </file>
     </package>
   </project>

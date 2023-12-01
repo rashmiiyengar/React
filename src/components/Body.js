@@ -31,12 +31,12 @@ const Body = () => {
    
     setListOfRestraunt(
       //Optional Chaining
-      jsonResponseData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+      jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setFilteredRestaurant(
       //Optional Chaining
-      jsonResponseData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+      jsonResponseData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
@@ -45,7 +45,7 @@ const Body = () => {
   // if (onlineStatus ===false) return
   // <h1>You are Offline</h1>
   //Conditional Rendering
-  // console.log(listOfRestaurants)
+   console.log(listOfRestaurants)
   // console.log(filteredRestaurant)
 
   const { loggedInUser, setUserName } = useContext(UserContext);
@@ -60,6 +60,7 @@ const Body = () => {
             type="text"
             className="searchbox form-control"
             placeholder="Search Restraunts"
+            data-testid="searchInput"
             value={searchText}
             onChange={(text) => {
               setSearchText(text.target.value);
@@ -107,7 +108,7 @@ const Body = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap">
+      <div data-testid="resCard" className="flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
           <Link
             className="app-theme"
