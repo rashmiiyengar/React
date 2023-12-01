@@ -1,4 +1,4 @@
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 import Header from "./Header";
 import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
