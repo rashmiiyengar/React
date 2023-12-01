@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { withOpenLabel } from "./RestrauntCard";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Offline from "./Offline";
-import UserContext from "../utils/UserContext";
+import UserContext from "../utils/userContext";
 
 const Body = () => {
   //State Variable = Powerful variable
