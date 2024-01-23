@@ -27,7 +27,7 @@ const RestrauntCard = (props) => {
       alt="res-logo"
       src={CDN_URL + restaurantImage}
     />
-    <div className="h-1/4 flex flex-col justify-between overflow-hidden">
+    <div className="h-1/4 flex flex-col justify-between overflow-hidden my-2">
         <div>
           <h6>{trimmedCuisine}</h6>
           <p>{starRating}</p>
