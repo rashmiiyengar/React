@@ -14,7 +14,7 @@ const RestrauntCard = (props) => {
   } = restaurant?.info;
 
   return (
-    <div style={{ height: '300px' }} className="m-4 p-4 w-[250px] h-[300px] !important rounded-lg bg-slate-100 hover:bg-slate-200">
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-slate-100 hover:bg-slate-200">
       <img
         className="rounded-lg h-38 w-42"
         alt="res-logo"
