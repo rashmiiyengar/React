@@ -31,12 +31,12 @@ const Body = () => {
    
     setListOfRestraunt(
       //Optional Chaining
-      jsonResponseData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+      jsonResponseData?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setFilteredRestaurant(
       //Optional Chaining
-      jsonResponseData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+      jsonResponseData?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
