@@ -13,21 +13,38 @@ const RestrauntCard = (props) => {
     areaName,
   } = restaurant?.info;
 
+  const maxCuisineLength = 25; // You can adjust this value as needed
+
+  // Trim the cuisine string if it exceeds the maximum length
+  const trimmedCuisine = cuisine.join(", ").length > maxCuisineLength
+    ? cuisine.join(", ").slice(0, maxCuisineLength) + "..."
+    : cuisine.join(", ");
+
   return (
-    <div className="m-4 p-4 w-[250px] rounded-lg bg-slate-100 hover:bg-slate-200">
-      <img
-        className="rounded-lg h-38 w-42"
-        alt="res-logo"
-        src={CDN_URL + restaurantImage}
-      ></img>
-      <h5 className="font-bold py-4">{restaurantName}</h5>
-      <h6>{cuisine.join(", ")}</h6>
-      <p>{starRating}</p>
-      <p>{costForTwo}</p>
-      <p>{areaName}</p>
-      <p>{restaurant.info.sla.deliveryTime} min to deliver</p>
+    <div className="m-4 p-4 w-[350px] h-[500px] rounded-lg bg-slate-100 hover:bg-slate-200 flex flex-col">
+    <img
+      className="rounded-lg w-full h-3/4 object-cover"
+      alt="res-logo"
+      src={CDN_URL + restaurantImage}
+    />
+    <div className="h-1/4 flex flex-col justify-between overflow-hidden">
+        <div>
+          <h6>{trimmedCuisine}</h6>
+          <p>{starRating}</p>
+         
+          <p className="font-bold ">{restaurantName}</p>
+          
+        </div>
+        <div>
+          <p>{restaurant.info.sla.deliveryTime} min to deliver</p>
+          
+        </div>
+        
+      </div>
+      
+      
     </div>
-  );
+  ); 
 };
 
 //Higher Order Component4
