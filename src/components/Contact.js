@@ -6,11 +6,18 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Get the subject value from the form
+  const subjectValue = form.current.subject.value;
+  const formData = {
+    ...form.current,
+    subject: subjectValue,
+  };
+
     emailjs
       .sendForm(
         "service_u0qo7k9",
         "template_8odw0e8",
-        form.current,
+        formData,
         "Pznp8220NptEBxwlx"
       )
       .then(
@@ -31,7 +38,7 @@ const Contact = () => {
           Contact Us
         </h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-900  sm:text-xl">
-          Got a technical issue? Want to send feedback about a beta feature?
+          Got a technical issue? Want to send feedback?
           Need details about our Business plan? Let us know.
         </p>
         <p>✉️ rashmiiyengar1002@gmail.com</p>
@@ -77,6 +84,7 @@ const Contact = () => {
             </label>
             <input
               type="text"
+              name="subject"
               id="subject"
               
               className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 "
@@ -92,12 +100,14 @@ const Contact = () => {
               Your message
             </label>
             <textarea
-              id="message"
-              name="message"
-              rows="6"
-              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-              placeholder="Leave a comment..."
-            ></textarea>
+  id="message"
+  name="message"
+  rows="6"
+  className="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300"
+  placeholder="Leave a comment..."
+></textarea>
+
+
           </div>
           <button
             type="submit"

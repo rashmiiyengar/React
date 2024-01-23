@@ -46,7 +46,7 @@ class UserClass extends React.Component {
     console.log("Child render");
     return (
       <div className="user-card m-4 p-4 bg-green-100 rounded-lg border-black">
-        <h5>Name: {name} </h5>
+        <h5 className="bg-green-50 shadow-lg">Name: {name} </h5>
         <p>Loation :{location}</p>
         <p>Public Repository :{public_repos}</p>
         <p>Contact : rashmiiyengar255@gmail.com</p>

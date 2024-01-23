@@ -87,7 +87,7 @@ const Body = () => {
             className="filter-btn btn btn-outline-success ml-4 mb-2 p-2"
             onClick={() => {
               let filteredList = listOfRestaurants.filter(
-                (res) => res.info.avgRating > 4.2
+                (res) => res.info.avgRating > 4.4
               );
               setFilteredRestaurant(filteredList);
              
