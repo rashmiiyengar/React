@@ -3,6 +3,7 @@ import { createSlice,current } from "@reduxjs/toolkit";
 const orderSlice = createSlice({
     name:"order",
     initialState: {
+        orderId: null,
         orders: []
     },
     reducers:{
