@@ -12,7 +12,10 @@ const OrderConfirmationPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const orderItems = useSelector((store) => store.order.orders);
-  console.log(orderItems);
+
+    //Always subscribe to the right portion of store to ave goot performance
+    const cartItems = useSelector((store) => store.cart.items);
+    console.log(orderItems);
 
 
   useEffect(() => {
@@ -59,7 +62,7 @@ const OrderConfirmationPage = () => {
         </div>
         <button
           className="btn btn-outline-success"
-          onClick={() => handleOrderClick(decodedData)}
+          onClick={() => handleOrderClick(cartItems)}
         >
           {" "}
           Order History{" "}
