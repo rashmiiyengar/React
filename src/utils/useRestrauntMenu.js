@@ -16,6 +16,7 @@ const fetchMenu = async() =>{
           );
 
          const jsonMenuResponse = await menuData.json();
+         console.log(jsonMenuResponse)
          setResInfo(jsonMenuResponse?.data)
 }
 
